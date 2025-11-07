@@ -2,11 +2,14 @@
   <img src="https://github.com/kethavathshankar/EcoInfinite_Nexu-s/blob/main/LOGO-3.jpeg" alt="RecyIndia Logo" width="260"/>
 </p>
 
-<h1 align="center" style="font-size: 2.5em; color: #2E8B57;">♻️ EcoInfinite Nexus — Now Running as <span style="color:#4CAF50;">RecyIndia</span></h1>
+<h1 align="center" style="font-size: 2.5em; color: #2E8B57;">
+  ♻️ EcoInfinite Nexus — Now Operating as <span style="color:#4CAF50;">RecyIndia</span>
+</h1>
 
 <p align="center">
-  <em><strong>"From Waste to Worth"</strong> — An AI-driven sustainable waste management startup founded and led by <strong>Kethavath Shankar</strong>, <br>
-  <strong>Founder & Lead — SSIP 2.0 Gujarat | IIIT Surat</strong>.</em>
+  <em><strong>"From Waste to Worth"</strong> — An AI-driven sustainable waste management startup founded and led by 
+  <strong>Kethavath Shankar</strong><br>
+  <strong>Founder & Lead — SSIP 2.0 Gujarat | IIIT Surat</strong></em>
 </p>
 
 ---
@@ -18,6 +21,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
 [![Render](https://img.shields.io/badge/Render-0099FF?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kethavathshankar/EcoInfinite_Nexu-s)
 
 </div>
@@ -27,31 +31,31 @@
 ## 🌍 About the Startup
 
 <p align="justify">
-<b>EcoInfinite Nexus</b> is an <b>AI-powered waste management and recycling platform</b>, now officially operating as a <b>running startup — RecyIndia</b>.  
+<b>EcoInfinite Nexus</b> is an <b>AI-powered waste management and recycling platform</b> — now officially operating as a <b>running startup named <span style="color:#4CAF50;">RecyIndia</span></b>.  
 Founded and led by <b>Kethavath Shankar</b>, this startup is recognized under the <b>Government of Gujarat SSIP 2.0 initiative</b> and incubated at <b>IIIT Surat</b>.
 
-As the <b>Founder & Lead</b>, <b>Kethavath Shankar</b> — a B.Tech Computer Science student at <b>IIIT Surat</b> — is passionate about combining <b>Machine Learning, Artificial Intelligence, and Sustainable Innovation</b> to transform India's waste management ecosystem through technology-driven solutions and digital recycling systems.
+As the <b>Founder & Lead</b>, <b>Kethavath Shankar</b> — a B.Tech Computer Science student at <b>IIIT Surat</b> — is passionate about merging <b>AI, Machine Learning, and Sustainability</b> to revolutionize India’s waste management ecosystem through smart collection, classification, and recycling systems.
 </p>
 
-> 💡 *EcoInfinite Nexus was the initial prototype name — now it’s a live, running startup under the name **RecyIndia**.*
+> 💡 *EcoInfinite Nexus was the initial prototype name — now it’s a live, running startup under the name **RecyIndia**, driving India's mission for a cleaner and circular economy.*
 
 ---
 
 ## 🎥 Project Demo
 
-🎬 Watch the official recorded demo here:  
+🎬 **Watch the official recorded demo here:**  
 👉 [EcoInfinite Nexus (RecyIndia) — Full Platform Demo](https://drive.google.com/file/d/1wS8h4RLM0ZMhpe-iO6A-KBSoQa5tQL5a/view?usp=sharing)
 
 ---
 
 ## ✨ Key Features
 
-- 🤖 **AI-Based Waste Classification (CNN + LSTM)** — Smart detection of waste type & quality  
-- 🚛 **Smart Collection System** — Door-to-door pickup scheduling & tracking  
-- 💳 **Razorpay Payment Integration** — Secure payments for waste & recycled goods  
-- 🧾 **User and Admin Dashboards** — Visual insights and management tools  
-- 🌱 **Circular Economy Integration** — Enabling reuse and recycling for sustainability  
-- 🛒 **Recycled Product Marketplace** — Buy and sell recycled materials online  
+- 🤖 **AI-Based Waste Classification (CNN + LSTM)** — Smart recognition of waste type & recyclability  
+- 🚛 **Smart Collection System** — Door-to-door waste pickup scheduling & tracking  
+- 💳 **Razorpay Payment Integration** — Digital payments for waste sales & recycled products  
+- 🧾 **Admin & User Dashboards** — Real-time analytics, reports, and monitoring  
+- 🛒 **Recycled Product Marketplace** — Buy/sell recycled goods directly online  
+- 🌱 **Circular Economy Integration** — Connecting households, recyclers, and industries digitally  
 
 ---
 
@@ -62,7 +66,7 @@ As the <b>Founder & Lead</b>, <b>Kethavath Shankar</b> — a B.Tech Computer Sci
 | **Frontend** | HTML, CSS, JavaScript, EJS Templates |
 | **Backend** | Node.js, Express.js |
 | **Database** | MongoDB |
-| **AI Model** | TensorFlow.js (CNN + LSTM) |
+| **AI Model** | TensorFlow.js (CNN + LSTM for waste classification) |
 | **Payments** | Razorpay |
 | **Deployment** | Render (Backend), Vercel (Frontend) |
 | **Version Control** | Git & GitHub |
