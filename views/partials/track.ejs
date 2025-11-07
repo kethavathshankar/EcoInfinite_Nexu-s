@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Order Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #232f3e;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .order-status {
+            border-top: 2px solid #ccc;
+            padding-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #232f3e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Tracking</h1>
+        <p>Please enter your order ID to track your order:</p>
+        <input type="text" id="order-id-input">
+        <button onclick="trackOrder()">Track Order</button>
+
+        <div class="order-status" id="order-status"></div>
+    </div>
+
+    <script>
+        function trackOrder() {
+            var orderId = document.getElementById('order-id-input').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/api/trackOrder?orderId=' + orderId, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById('order-status').innerHTML = "<p>Order status for ID " + orderId + ": " + response.status + "</p>";
+                    } else {
+                        document.getElementById('order-status').innerHTML = "<p>Failed to track order. Please try again later.</p>";
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

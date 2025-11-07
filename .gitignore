@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+.env
+/public/images/
+/public/uploads/
+*.bin
+*.h5
+*.pb
+dist/
+build/
+tmp/
+out/
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and Information Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom right, #ff7eb6, #65ffba);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .form-group input[type="text"],
+      .form-group input[type="file"],
+      .form-group select {
+        width: calc(100% - 12px);
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .form-group textarea {
+        width: calc(100% - 12px);
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #45a049;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Image and Information</h2>
+        <form id="uploadForm" action="/user/infoimg" method="post" >
+            <div class="form-group">
+                
+                <label for="address">Address:</label>
+                <input type="file" id="image" name="image" placeholder="image" required>
+                <input type="text" id="address" name="address" placeholder="Area/Street" required>
+                <input type="text" id="city" name="city" placeholder="City" required>
+                <input type="text" id="state" name="state" placeholder="State" required>
+                <input type="text" id="pincode" name="pincode" placeholder="Pincode" required>
+                <input type="text" id="landmark" name="landmark" placeholder="Landmark (Optional)">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="wasteType">Type of Waste:</label>
+                <select id="wasteType" name="wasteType">
+                    <option value="">Select Waste Type</option>
+                    <option value="plastic">Plastic</option>
+                    <option value="metal">Metal</option>
+                    <option value="domestic">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="imageDescription">Image Description:</label>
+                <textarea id="imageDescription" name="imageDescription" rows="4" placeholder="Provide details about the image (optional)"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+  
+</body>
+</html>

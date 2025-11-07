@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 100px; /* Adjust the size of your logo */
+            margin-right: 20px; /* Space between logo and title */
+        }
+        .header h1 {
+            font-size: 24px;
+        }
+        .bill-details {
+            margin-top: 20px;
+        }
+        .bill-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .bill-details th, .bill-details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .total {
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: right;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with company logo on the left -->
+    <div class="header">
+        <img src="/images/logo.png" alt="Company Logo"> <!-- Make sure the logo path is correct -->
+        <h1>Invoice</h1>
+    </div>
+
+    <div class="bill-details">
+        <h2>Order Details</h2>
+        <p><strong>Customer:</strong> <%= order.user.fullName %></p>
+        <p><strong>Email:</strong> <%= order.user.email %></p>
+        <p><strong>Address:</strong> <%= order.user.address %></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Waste Type</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% order.items.forEach(item => { %>
+                    <tr>
+                        <td><%= item.wasteType %></td>
+                        <td><%= item.quantity %></td>
+                        <td><%= item.price %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+        <div class="total">
+            <strong>Total Amount:</strong> <%= order.totalAmount %>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Thank you for your purchase!</p>
+    </div>
+
+</body>
+</html>

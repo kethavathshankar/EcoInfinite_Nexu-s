@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Sell Your Trash</title>
+</head>
+<body>
+    
+        <style>
+            /* General Styles */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f8f9fa;
+                color: #333;
+            }
+            header {
+                background-color: #17a2b8;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+            nav {
+                background-color: #333;
+                padding: 30px;
+                text-align: center;
+            }
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+            main {
+                padding: 20px;
+            }
+            footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            /* Unique Styles for Sell Trash */
+            .sell-trash-container {
+                background-color: #fff;
+                padding: 40px;
+                border-radius: 20px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
+                margin: 20px auto;
+                text-align: center;
+            }
+            .sell-trash-container h2 {
+                color: #17a2b8;
+                margin-bottom: 20px;
+                font-size: 2rem;
+            }
+            .sell-trash-form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+                align-items: center;
+                justify-items: center;
+            }
+            .sell-trash-form label {
+                font-size: 1.2rem;
+                color: #555;
+            }
+            .sell-trash-form input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                font-size: 1rem;
+            }
+            .sell-trash-form button {
+                background-color: #17a2b8;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                font-size: 1rem;
+            }
+            .sell-trash-form button:hover {
+                background-color: #138496;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Sell Trash</h1>
+        </header>
+        <nav>
+            <a href="/user/Home">Home</a>
+            <a href="/user/RecycleProducts">Recycling Products</a>
+            <a href="/user/SellTrash">Sell Waste</a>
+            <a href="/user/BuyTrash">Buy Waste</a>
+            <a href="/user/AboutWM">About Waste Management</a>
+            <a href="/user/Service">Services</a>
+            <a href="/user/Aboutus">About Us</a>
+            <a href="/user/Typeswaste">Types of Waste</a>
+        </nav>
+        <main>
+            <div class="sell-trash-container">
+                <h2>Sell Your Trash</h2>
+                <form class="sell-trash-form" action="/user/SellTrash" method="post">
+                    <label for="wasteType">Waste Type:</label>
+                    <input type="text" id="wasteType" name="wasteType" placeholder="Enter waste type">
+                    <label for="quantity">Quantity (in kg):</label>
+                    <input type="text" id="quantity" name="quantity" placeholder="Enter quantity">
+                    <label for="price">Price per kg:</label>
+                    <input type="text" id="price" name="price" placeholder="Enter price per kg">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p style="color: rgb(229, 255, 0)">&copy; 2024 Waste Management System. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
+    
+
+    
+</body>
+
+</html>

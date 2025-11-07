@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Classification</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Waste Classification</h1>
+        <input type="file" id="imageUpload" accept="image/*">
+        <button id="predictButton">Predict</button>
+        <div id="predictionResult"></div>
+    </div>
+
+    <script>
+        let model;
+        const class_names = ['Ewaste', 'Fabric', 'Carboard', 'Biowaste', 'Metal', 'Plastic', 'Glass', 'Paper', 'Trash'];
+
+        // Load the model when the window loads
+        window.onload = async () => {
+            model = await tf.loadLayersModel('/model.json'); // Adjust path if needed
+            console.log('Model loaded');
+        };
+
+        document.getElementById('predictButton').addEventListener('click', async () => {
+            const imageUpload = document.getElementById('imageUpload');
+            if (imageUpload.files.length > 0) {
+                const image = await loadImage(imageUpload.files[0]);
+                const prediction = model.predict(image);
+                displayPrediction(prediction);
+            }
+        });
+
+        // Load and preprocess the image
+        function loadImage(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.src = event.target.result;
+                    img.onload = () => {
+                        const tensor = tf.browser.fromPixels(img)
+                            .resizeNearestNeighbor([224, 224]) // Adjust based on model input size
+                            .toFloat()
+                            .sub(tf.scalar(127.5)).div(tf.scalar(127.5)) // Normalize to [-1, 1]
+                            .expandDims();
+                        resolve(tensor);
+                    };
+                    img.onerror = reject;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // Display the prediction results
+        function displayPrediction(prediction) {
+            const predictionResult = document.getElementById('predictionResult');
+            prediction.array().then(array => {
+                let results = '';
+                for (let i = 0; i < class_names.length; i++) {
+                    results += `${class_names[i]}: ${(array[0][i] * 100).toFixed(2)}%<br>`;
+                }
+                predictionResult.innerHTML = results;
+            });
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        #imageUpload {
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 2px solid #007bff;
+        }
+
+        #predictButton {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #predictButton:hover {
+            background-color: #e64a19;
+        }
+
+        #predictionResult {
+            margin-top: 20px;
+            padding: 0px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            width: 100%;
+            border: 3px solid #ffeb3b;
+        }
+    </style>
+</body>
+</html>

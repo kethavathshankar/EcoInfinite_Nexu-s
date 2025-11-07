@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecoinfinite Nexus - Waste Details</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <style>
+    :root {
+      --primary: #28821c;
+      --secondary: #3f37c9;
+      --accent: #4895ef;
+      --danger: #f72585;
+      --success: #4cc9f0;
+      --warning: #f8961e;
+      --light: #f8f9fa;
+      --dark: #212529;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      display: flex;
+      background-color: #f5f7fa;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 250px;
+      background: white;
+      height: 100vh;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      transition: all 0.3s;
+      overflow-y: auto;
+    }
+    .sidebar-header {
+      padding: 20px;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .sidebar-header h3 {
+      margin-left: 10px;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    .sidebar-menu {
+      padding: 20px 0;
+    }
+    .sidebar-menu li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+    .sidebar-menu a {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      color: var(--dark);
+      text-decoration: none;
+      transition: all 0.3s;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .sidebar-menu a:hover,
+    .sidebar-menu a.active {
+      background: #e9ecef;
+      border-left: 4px solid var(--primary);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .sidebar-menu i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .main-content {
+      flex: 1;
+      margin-left: 250px;
+      padding: 20px;
+      transition: all 0.3s;
+      min-height: 100vh;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .header h2 {
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .user-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+      border: 2px solid var(--primary);
+    }
+    .user-dropdown {
+      cursor: pointer;
+      user-select: none;
+    }
+    .user-dropdown span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--dark);
+      font-weight: 600;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      min-width: 150px;
+    }
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .dropdown-menu a:hover {
+      background: #f1f1f1;
+      color: var(--primary);
+    }
+    /* Filter inputs container */
+    .filter-container {
+      margin-bottom: 15px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .filter-container label {
+      font-weight: 600;
+      color: var(--dark);
+      margin-right: 5px;
+    }
+    .filter-container input {
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      width: 200px;
+      max-width: 100%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      vertical-align: middle;
+      font-size: 0.9rem;
+      color: var(--dark);
+    }
+    th {
+      background-color: var(--primary);
+      color: white;
+      font-weight: 600;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    @media (max-width: 992px) {
+      .sidebar {
+        width: 80px;
+      }
+      .sidebar-header h3,
+      .sidebar-menu span {
+        display: none;
+      }
+      .sidebar-menu a {
+        justify-content: center;
+        padding: 15px 0;
+      }
+      .sidebar-menu i {
+        margin-right: 0;
+        font-size: 1.2rem;
+      }
+      .main-content {
+        margin-left: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+
+  <nav class="sidebar" aria-label="Sidebar navigation">
+    <div class="sidebar-header">
+      <i class="fas fa-home fa-1x" aria-hidden="true"></i>
+      <h3>Ecoinfinite Nexus</h3>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="/admin/dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+      <li><a href="/admin/customers"><i class="fas fa-users"></i><span>Customers Details</span></a></li>
+      <li><a href="/admin/waste" class="active"><i class="fas fa-trash"></i><span>Waste Collection</span></a></li>
+      <!-- <li><a href="/admin/handicrafts"><i class="fas fa-concierge-bell"></i><span>Handicraft Products</span></a></li> -->
+      <li><a href="/admin/payments"><i class="fas fa-calendar-check"></i><span>Payments Details</span></a></li>
+      <li><a href="/admin/settings"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+
+  <main class="main-content">
+    <header class="header">
+      <h2>Waste Details</h2>
+      <div class="user-info">
+        <img
+          src="https://t3.ftcdn.net/jpg/00/07/32/48/360_F_7324855_mx4CEBWTr81XLOrlQccCROtP2uNR7xbk.jpg"
+          alt="Admin Profile Picture"
+        />
+        <div class="user-dropdown" id="userDropdown" aria-haspopup="true" aria-expanded="false">
+          <span id="dropdownToggle" tabindex="0" aria-controls="dropdownMenu" aria-haspopup="true" aria-expanded="false">
+            Admin <i class="fas fa-caret-down" aria-hidden="true"></i>
+          </span>
+          <nav class="dropdown-menu" id="dropdownMenu" role="menu" aria-label="User menu">
+            <a href="/admin/profile" role="menuitem"><i class="fas fa-user"></i> Profile</a>
+            <a href="/admin/logout" role="menuitem"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filter Inputs -->
+    <section aria-label="Filter Waste Details">
+      <div class="filter-container">
+        <div>
+          <label for="filterWasteCategory">Filter by Waste Category:</label>
+          <input
+            type="text"
+            id="filterWasteCategory"
+            placeholder="Enter waste category..."
+            aria-describedby="filterWasteCategoryHelp"
+          />
+        </div>
+        <div>
+          <label for="filterPincode">Filter by Pincode:</label>
+          <input
+            type="text"
+            id="filterPincode"
+            placeholder="Enter pincode..."
+            aria-describedby="filterPincodeHelp"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Waste Table -->
+    <section aria-label="Waste Details Table">
+      <table id="wasteTable">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Location</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Waste Category</th>
+            <th scope="col">Description</th>
+            <th scope="col">Reported Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (wastes && wastes.length > 0) { %>
+            <% wastes.forEach((waste, index) => { %>
+              <tr>
+                <td><%= index + 1 %></td>
+                <td><%= waste.address %>, <%= waste.landmark %>, <%= waste.city %>, <%= waste.state %> - <%= waste.pincode %></td>
+                <td><%= waste.phone %></td>
+                <td class="waste-category"><%= waste.wasteType %></td>
+                <td><%= waste.imageDescription %></td>
+                <td><%= waste.createdAt.toLocaleDateString() %></td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr>
+              <td colspan="6">No waste details found.</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    // Dropdown toggle accessibility
+    const dropdownToggle = document.getElementById('dropdownToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    dropdownToggle.addEventListener('click', () => {
+      const expanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+      dropdownToggle.setAttribute('aria-expanded', !expanded);
+      dropdownMenu.style.display = expanded ? 'none' : 'block';
+    });
+
+    dropdownToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dropdownToggle.click();
+      }
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (e) => {
+      if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.style.display = 'none';
+        dropdownToggle.setAttribute('aria-expanded', false);
+      }
+    });
+
+    // Filter functionality
+    const filterWasteCategoryInput = document.getElementById('filterWasteCategory');
+    const filterPincodeInput = document.getElementById('filterPincode');
+    const wasteTable = document.getElementById('wasteTable');
+    const tbody = wasteTable.tBodies[0];
+
+    function filterTable() {
+      const wasteCategoryFilter = filterWasteCategoryInput.value.trim().toLowerCase();
+      const pincodeFilter = filterPincodeInput.value.trim();
+
+      for (let row of tbody.rows) {
+        const categoryCell = row.querySelector('.waste-category');
+        const locationCell = row.cells[1]; // Location cell (contains pincode)
+        const categoryText = categoryCell ? categoryCell.textContent.toLowerCase() : '';
+        const locationText = locationCell ? locationCell.textContent : '';
+
+        // Extract pincode from location text (assuming last 6 digits are pincode)
+        const pincodeMatch = locationText.match(/\b\d{6}\b/);
+        const rowPincode = pincodeMatch ? pincodeMatch[0] : '';
+
+        const matchesCategory = categoryText.includes(wasteCategoryFilter);
+        const matchesPincode = rowPincode.includes(pincodeFilter);
+
+        if (
+          (wasteCategoryFilter === '' || matchesCategory) &&
+          (pincodeFilter === '' || matchesPincode)
+        ) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+    }
+
+    filterWasteCategoryInput.addEventListener('input', filterTable);
+    filterPincodeInput.addEventListener('input', filterTable);
+  </script>
+</body>
+</html>

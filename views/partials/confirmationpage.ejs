@@ -1,0 +1,21 @@
+<!-- confirmationpage.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+</head>
+<body>
+    <h1>Payment Successful</h1>
+    <p>Order ID: <%= orderId %></p>
+    <p>Total Amount: ₹<%= totalAmount %></p>
+
+    <!-- Add a button to download the bill -->
+    <form action="/download-bill" method="GET">
+        <input type="hidden" name="orderId" value="<%= orderId %>">
+        <input type="hidden" name="totalAmount" value="<%= totalAmount %>">
+        <button type="submit">Download Bill</button>
+    </form>
+</body>
+</html>
