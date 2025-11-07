@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/kethavathshankar/EcoInfinite_Nexu-s/blob/main/assets/LOGO-3.jpeg" alt="RecyIndia Logo" width="260"/>
+  <img src="https://github.com/kethavathshankar/EcoInfinite_Nexu-s/blob/main/LOGO-3.jpeg" alt="RecyIndia Logo" width="260"/>
 </p>
 
 <h1 align="center" style="font-size: 2.5em; color: #2E8B57;">♻️ EcoInfinite Nexus — Now Running as <span style="color:#4CAF50;">RecyIndia</span></h1>
