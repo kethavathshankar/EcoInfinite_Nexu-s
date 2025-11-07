@@ -1,45 +1,58 @@
-# ♻️ EcoInfinite Nexus — From Waste to Worth
+# ♻️ EcoInfinite Nexus — From Waste to Worth  
 
-### 🌍 AI + MERN Powered Sustainable Waste Management Platform  
-Developed by **Kethavath Shankar**, Founder & Project Lead — SSIP 2.0, Government of Gujarat Initiative.
-
----
-
-## 🚀 About the Project
-
-**EcoInfinite Nexus** is a full-featured, AI-powered waste management and recycling e-commerce platform.  
-It enables users to sell, recycle, and purchase waste materials while promoting sustainability and circular economy practices.
-
-This platform integrates a **CNN + LSTM hybrid model** for intelligent waste classification and recyclability prediction.  
-Through real-time analysis, it identifies waste types and provides quality assessments, enabling optimized collection and processing.
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)  
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)  
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)  
+[![Render](https://img.shields.io/badge/Render-0099FF?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)  
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kethavathshankar/EcoInfinite_Nexu-s)  
 
 ---
 
-## 🧠 Key Features
+## 🌍 About the Project
 
-- 🔍 **AI-Powered Waste Detection** – CNN + LSTM hybrid deep learning model for accurate waste type and recyclability prediction.  
-- 👥 **User & Admin Dashboards** – Real-time control panels for users, recyclers, and administrators.  
-- 💰 **Razorpay Integration** – Secure payment gateway for buying/selling recyclable materials.  
-- 📦 **E-Commerce Architecture** – Marketplace for trading waste products and recycled goods.  
-- 🧾 **Real-Time Analytics** – Visual reports and waste tracking metrics for environmental insights.  
-- 🚛 **Door-to-Door Collection** – Smart waste pickup requests with integrated scheduling.  
-- 🌱 **Sustainability Goal** – Reduce landfill waste and promote a circular economy.
+**EcoInfinite Nexus** is an AI-driven waste management and recycling e-commerce platform that transforms the way waste is collected, categorized, and reused.  
+It integrates **deep learning models (CNN + LSTM)** with a full-stack **Node.js and MongoDB backend**, allowing users to **buy, sell, and recycle waste** efficiently.  
+
+This system is built under **SSIP 2.0 (Student Startup and Innovation Policy)** — Government of Gujarat initiative — and focuses on **sustainability through AI innovation**.
 
 ---
 
-## ⚙️ Tech Stack
+## 🎥 Project Demo
+
+🎬 Watch the complete recorded walkthrough of the platform here:  
+👉 [EcoInfinite Nexus — Demo Video](https://drive.google.com/file/d/1wS8h4RLM0ZMhpe-iO6A-KBSoQa5tQL5a/view?usp=sharing)
+
+---
+
+## ✨ Features
+
+- 🧠 **AI-Based Waste Detection** — CNN + LSTM hybrid model for classifying and grading waste.  
+- 👥 **User & Admin Dashboards** — Real-time insights and control panels.  
+- 💸 **Razorpay Payment Integration** — Secure waste transaction system.  
+- 🧾 **Order Tracking & Analytics** — Insightful environmental impact dashboards.  
+- 🚛 **Smart Collection Requests** — Door-to-door scheduling and status tracking.  
+- 🌱 **Circular Economy Focus** — Encouraging reuse and responsible recycling.
+
+---
+
+## 🧠 Tech Stack
 
 | Category | Technologies |
 |-----------|--------------|
-| **Frontend** | HTML, CSS, EJS, JavaScript |
+| **Frontend** | HTML, CSS, JavaScript, EJS Templates |
 | **Backend** | Node.js, Express.js |
 | **Database** | MongoDB |
-| **Machine Learning** | TensorFlow.js, CNN, LSTM |
+| **Machine Learning** | TensorFlow.js (CNN + LSTM model) |
 | **Payments** | Razorpay |
-| **Version Control** | Git & GitHub |
 | **Deployment** | Render (Backend), Vercel (Frontend optional) |
+| **Version Control** | Git & GitHub |
 
 ---
 
-## 🧩 Project Architecture
+## ⚙️ Setup Instructions
 
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/kethavathshankar/EcoInfinite_Nexu-s.git
+cd EcoInfinite_Nexu-s
