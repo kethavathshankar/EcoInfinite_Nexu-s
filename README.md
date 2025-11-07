@@ -1,4 +1,14 @@
-# ♻️ EcoInfinite Nexus — From Waste to Worth  
+<p align="center">
+  <img src="https://github.com/kethavathshankar/EcoInfinite_Nexu-s/blob/main/assets/RecyIndia_logo.jpeg" alt="RecyIndia Logo" width="260"/>
+</p>
+
+<h1 align="center">♻️ EcoInfinite Nexus — now running as <span style="color:#4CAF50;">RecyIndia</span></h1>
+
+<p align="center">
+  <em>From Waste to Worth — An AI-driven sustainable waste management startup founded and led by <strong>Kethavath Shankar</strong>, SSIP 2.0 Gujarat | IIIT Surat.</em>
+</p>
+
+---
 
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  
 [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)  
@@ -11,30 +21,37 @@
 
 ## 🌍 About the Startup
 
-**EcoInfinite Nexus** is an **AI-driven waste management and recycling platform**, now officially operating as a **startup under the brand name [RecyIndia]**, recognized by the **Government of Gujarat under SSIP 2.0**.
+**EcoInfinite Nexus** is an **AI-powered waste management and recycling platform**, now officially operating as a **running startup — RecyIndia**, founded and led by **Kethavath Shankar**, recognized under the **Government of Gujarat SSIP 2.0 initiative** and incubated at **IIIT Surat**.
 
-This startup is **actively running**, focusing on **door-to-door waste collection, AI-based waste classification**, and **recycled product trading**.  
-It integrates **Machine Learning (CNN + LSTM)**, **Node.js**, and **MongoDB** to make India’s waste ecosystem smarter, digital, and sustainable.
+As the **Founder & Lead**, Kethavath Shankar — a B.Tech Computer Science student at IIIT Surat — is passionate about combining **Machine Learning, AI, and sustainable innovation** to solve India’s waste management challenges through technology and smart recycling systems.
 
-> 💡 *EcoInfinite Nexus was the original project name. It is now a fully functional and running startup — **RecyIndia** — currently incubated and piloting across India.*
+This startup focuses on:  
+- 🚛 **Door-to-door waste collection**  
+- 🤖 **AI-based waste recognition and classification**  
+- ♻️ **Recycled product trading and management**  
+- 📊 **Data-driven sustainability insights**
+
+Our mission is to make India’s waste management **smarter, cleaner, and digital** through **AI + ML + IoT**.
+
+> 💡 *EcoInfinite Nexus was the initial prototype name — now it’s a live, running startup under the name **RecyIndia**.*
 
 ---
 
 ## 🎥 Project Demo
 
-🎬 Watch the full demo of the platform here:  
-👉 [EcoInfinite Nexus (RecyIndia) — Recorded Demo](https://drive.google.com/file/d/1wS8h4RLM0ZMhpe-iO6A-KBSoQa5tQL5a/view?usp=sharing)
+🎬 Watch the official recorded demo:  
+👉 [EcoInfinite Nexus (RecyIndia) — Full Platform Demo](https://drive.google.com/file/d/1wS8h4RLM0ZMhpe-iO6A-KBSoQa5tQL5a/view?usp=sharing)
 
 ---
 
 ## ✨ Key Features
 
-- 🤖 **AI-Based Waste Classification** — CNN + LSTM model predicts waste category and quality.  
-- 🚛 **Smart Waste Collection System** — Door-to-door pickup scheduling and live tracking.  
-- 🧾 **User & Admin Dashboards** — Real-time data for users, recyclers, and admins.  
-- 💳 **Online Payment Gateway (Razorpay)** — Seamless digital payments for transactions.  
-- 📊 **Environmental Impact Dashboard** — Data visualization for collected and recycled waste.  
-- 🌱 **Circular Economy Integration** — Promoting reduce, reuse, and recycle principles.
+- 🤖 **AI-Based Waste Classification (CNN + LSTM)** — Smart detection of waste type & quality  
+- 🚛 **Smart Collection System** — Door-to-door pickup scheduling & tracking  
+- 💳 **Razorpay Payment Integration** — Secure payments for waste & recycled goods  
+- 🧾 **User and Admin Dashboards** — Data visualization for all stakeholders  
+- 🌱 **Circular Economy Integration** — Enabling reuse and recycling for sustainability  
+- 📦 **Recycled Product Marketplace** — Trade and purchase recycled products online  
 
 ---
 
@@ -47,7 +64,7 @@ It integrates **Machine Learning (CNN + LSTM)**, **Node.js**, and **MongoDB** to
 | **Database** | MongoDB |
 | **AI Model** | TensorFlow.js (CNN + LSTM) |
 | **Payments** | Razorpay |
-| **Deployment** | Render (Backend), Vercel (Frontend optional) |
+| **Deployment** | Render (Backend), Vercel (Frontend) |
 | **Version Control** | Git & GitHub |
 
 ---
