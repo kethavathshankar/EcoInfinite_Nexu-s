@@ -2,36 +2,36 @@
   <img src="https://github.com/kethavathshankar/EcoInfinite_Nexu-s/blob/main/assets/RecyIndia_logo.jpeg" alt="RecyIndia Logo" width="260"/>
 </p>
 
-<h1 align="center">♻️ EcoInfinite Nexus — now running as <span style="color:#4CAF50;">RecyIndia</span></h1>
+<h1 align="center" style="font-size: 2.5em; color: #2E8B57;">♻️ EcoInfinite Nexus — Now Running as <span style="color:#4CAF50;">RecyIndia</span></h1>
 
 <p align="center">
-  <em>From Waste to Worth — An AI-driven sustainable waste management startup founded and led by <strong>Kethavath Shankar</strong>, SSIP 2.0 Gujarat | IIIT Surat.</em>
+  <em><strong>"From Waste to Worth"</strong> — An AI-driven sustainable waste management startup founded and led by <strong>Kethavath Shankar</strong>, <br>
+  <strong>Founder & Lead — SSIP 2.0 Gujarat | IIIT Surat</strong>.</em>
 </p>
 
 ---
 
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  
-[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)  
-[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)  
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)  
-[![Render](https://img.shields.io/badge/Render-0099FF?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)  
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kethavathshankar/EcoInfinite_Nexu-s)  
+<div align="center">
+
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+[![Render](https://img.shields.io/badge/Render-0099FF?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kethavathshankar/EcoInfinite_Nexu-s)
+
+</div>
 
 ---
 
 ## 🌍 About the Startup
 
-**EcoInfinite Nexus** is an **AI-powered waste management and recycling platform**, now officially operating as a **running startup — RecyIndia**, founded and led by **Kethavath Shankar**, recognized under the **Government of Gujarat SSIP 2.0 initiative** and incubated at **IIIT Surat**.
+<p align="justify">
+<b>EcoInfinite Nexus</b> is an <b>AI-powered waste management and recycling platform</b>, now officially operating as a <b>running startup — RecyIndia</b>.  
+Founded and led by <b>Kethavath Shankar</b>, this startup is recognized under the <b>Government of Gujarat SSIP 2.0 initiative</b> and incubated at <b>IIIT Surat</b>.
 
-As the **Founder & Lead**, Kethavath Shankar — a B.Tech Computer Science student at IIIT Surat — is passionate about combining **Machine Learning, AI, and sustainable innovation** to solve India’s waste management challenges through technology and smart recycling systems.
-
-This startup focuses on:  
-- 🚛 **Door-to-door waste collection**  
-- 🤖 **AI-based waste recognition and classification**  
-- ♻️ **Recycled product trading and management**  
-- 📊 **Data-driven sustainability insights**
-
-Our mission is to make India’s waste management **smarter, cleaner, and digital** through **AI + ML + IoT**.
+As the <b>Founder & Lead</b>, <b>Kethavath Shankar</b> — a B.Tech Computer Science student at <b>IIIT Surat</b> — is passionate about combining <b>Machine Learning, Artificial Intelligence, and Sustainable Innovation</b> to transform India's waste management ecosystem through technology-driven solutions and digital recycling systems.
+</p>
 
 > 💡 *EcoInfinite Nexus was the initial prototype name — now it’s a live, running startup under the name **RecyIndia**.*
 
@@ -39,7 +39,7 @@ Our mission is to make India’s waste management **smarter, cleaner, and digita
 
 ## 🎥 Project Demo
 
-🎬 Watch the official recorded demo:  
+🎬 Watch the official recorded demo here:  
 👉 [EcoInfinite Nexus (RecyIndia) — Full Platform Demo](https://drive.google.com/file/d/1wS8h4RLM0ZMhpe-iO6A-KBSoQa5tQL5a/view?usp=sharing)
 
 ---
@@ -49,9 +49,9 @@ Our mission is to make India’s waste management **smarter, cleaner, and digita
 - 🤖 **AI-Based Waste Classification (CNN + LSTM)** — Smart detection of waste type & quality  
 - 🚛 **Smart Collection System** — Door-to-door pickup scheduling & tracking  
 - 💳 **Razorpay Payment Integration** — Secure payments for waste & recycled goods  
-- 🧾 **User and Admin Dashboards** — Data visualization for all stakeholders  
+- 🧾 **User and Admin Dashboards** — Visual insights and management tools  
 - 🌱 **Circular Economy Integration** — Enabling reuse and recycling for sustainability  
-- 📦 **Recycled Product Marketplace** — Trade and purchase recycled products online  
+- 🛒 **Recycled Product Marketplace** — Buy and sell recycled materials online  
 
 ---
 
