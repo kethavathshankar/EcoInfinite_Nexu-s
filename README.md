@@ -9,30 +9,32 @@
 
 ---
 
-## 🌍 About the Project
+## 🌍 About the Startup
 
-**EcoInfinite Nexus** is an AI-driven waste management and recycling e-commerce platform that transforms the way waste is collected, categorized, and reused.  
-It integrates **deep learning models (CNN + LSTM)** with a full-stack **Node.js and MongoDB backend**, allowing users to **buy, sell, and recycle waste** efficiently.  
+**EcoInfinite Nexus** is an **AI-driven waste management and recycling platform**, now officially operating as a **startup under the brand name [RecyIndia]**, recognized by the **Government of Gujarat under SSIP 2.0**.
 
-This system is built under **SSIP 2.0 (Student Startup and Innovation Policy)** — Government of Gujarat initiative — and focuses on **sustainability through AI innovation**.
+This startup is **actively running**, focusing on **door-to-door waste collection, AI-based waste classification**, and **recycled product trading**.  
+It integrates **Machine Learning (CNN + LSTM)**, **Node.js**, and **MongoDB** to make India’s waste ecosystem smarter, digital, and sustainable.
+
+> 💡 *EcoInfinite Nexus was the original project name. It is now a fully functional and running startup — **RecyIndia** — currently incubated and piloting across India.*
 
 ---
 
 ## 🎥 Project Demo
 
-🎬 Watch the complete recorded walkthrough of the platform here:  
-👉 [EcoInfinite Nexus — Demo Video](https://drive.google.com/file/d/1wS8h4RLM0ZMhpe-iO6A-KBSoQa5tQL5a/view?usp=sharing)
+🎬 Watch the full demo of the platform here:  
+👉 [EcoInfinite Nexus (RecyIndia) — Recorded Demo](https://drive.google.com/file/d/1wS8h4RLM0ZMhpe-iO6A-KBSoQa5tQL5a/view?usp=sharing)
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- 🧠 **AI-Based Waste Detection** — CNN + LSTM hybrid model for classifying and grading waste.  
-- 👥 **User & Admin Dashboards** — Real-time insights and control panels.  
-- 💸 **Razorpay Payment Integration** — Secure waste transaction system.  
-- 🧾 **Order Tracking & Analytics** — Insightful environmental impact dashboards.  
-- 🚛 **Smart Collection Requests** — Door-to-door scheduling and status tracking.  
-- 🌱 **Circular Economy Focus** — Encouraging reuse and responsible recycling.
+- 🤖 **AI-Based Waste Classification** — CNN + LSTM model predicts waste category and quality.  
+- 🚛 **Smart Waste Collection System** — Door-to-door pickup scheduling and live tracking.  
+- 🧾 **User & Admin Dashboards** — Real-time data for users, recyclers, and admins.  
+- 💳 **Online Payment Gateway (Razorpay)** — Seamless digital payments for transactions.  
+- 📊 **Environmental Impact Dashboard** — Data visualization for collected and recycled waste.  
+- 🌱 **Circular Economy Integration** — Promoting reduce, reuse, and recycle principles.
 
 ---
 
@@ -43,7 +45,7 @@ This system is built under **SSIP 2.0 (Student Startup and Innovation Policy)** 
 | **Frontend** | HTML, CSS, JavaScript, EJS Templates |
 | **Backend** | Node.js, Express.js |
 | **Database** | MongoDB |
-| **Machine Learning** | TensorFlow.js (CNN + LSTM model) |
+| **AI Model** | TensorFlow.js (CNN + LSTM) |
 | **Payments** | Razorpay |
 | **Deployment** | Render (Backend), Vercel (Frontend optional) |
 | **Version Control** | Git & GitHub |
